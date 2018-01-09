@@ -32,4 +32,11 @@ public class LibraryTest {
 
     }
 
+    @Test
+    public void canAddBookIfStockLessThanCapacity(){
+        int bookCountBefore = library.bookCount();
+        library.addBook(book);
+        assertEquals(bookCountBefore+1, library.bookCount());
+    }
+
 }
