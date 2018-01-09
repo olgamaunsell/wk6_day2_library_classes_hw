@@ -12,13 +12,19 @@ public class Library {
         this.books = new ArrayList<>();
     }
 
+    //    Method to count the number of books in the library.
     public int bookCount() {
         return this.books.size();
     }
 
+    //    Method to check capacity of library before adding a book.
     public void addBook(Book book) {
         if(bookCount() < this.capacity) {
             this.books.add(book);
         }
+    }
+    // Method to remove a book from the library
+    public void removeBook(Book book) {
+        this.books.remove(book);
     }
 }
