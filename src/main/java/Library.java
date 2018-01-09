@@ -6,7 +6,7 @@ public class Library {
     private ArrayList<Book> books;
 
 
-    public Library(int capacity){
+    public Library(int capacity) {
         this.capacity = capacity;
         this.books = new ArrayList<>();
     }
@@ -18,12 +18,14 @@ public class Library {
 
     //    Method to check capacity of library before adding a book.
     public void addBook(Book book) {
-        if(bookCount() < this.capacity) {
+        if (bookCount() < this.capacity) {
             this.books.add(book);
         }
     }
+
     // Method to remove a book from the library
-    public void removeBook(Book book) {
+    public Book removeBook(Book book) {
         this.books.remove(book);
     }
+
 }

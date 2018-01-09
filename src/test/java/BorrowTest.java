@@ -24,4 +24,11 @@ public class BorrowTest {
         assertEquals(0, borrower.bookCount());
     }
 
+    @Test
+
+    public void canBorrowBook(){
+        borrower.borrowBook(library, book);
+        assertEquals(1, borrower.bookCount());
+        assertEquals(0, library.bookCount());
+    }
 }
