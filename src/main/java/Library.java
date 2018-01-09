@@ -1,3 +1,4 @@
+import java.awt.print.Book;
 import java.util.ArrayList;
 
 public class Library {
@@ -13,5 +14,10 @@ public class Library {
 
     public int bookCount() {
         return this.books.size();
+    }
+
+    public void addBook(Book book) {
+        this.books.add(book);
+
     }
 }
