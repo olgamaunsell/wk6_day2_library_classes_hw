@@ -7,13 +7,17 @@ import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
 
-    private Library library;
-    private Book book;
+    Library library;
+    Library library2;
+    Book book;
+    Book book2;
 
     @Before
     public void before() {
         library = new Library(10);
+        library2 = new Library(1);
         book = new Book();
+        book2 = new Book();
 
     }
 
@@ -39,4 +43,11 @@ public class LibraryTest {
         assertEquals(bookCountBefore+1, library.bookCount());
     }
 
+    @Test
+    public void cantAddBookIfLibraryFull(){
+        int bookCountBefore = library2.bookCount();
+        library2.addBook(book);
+        library2.addBook(book2);
+        assertEquals(bookCountBefore+1, library2.bookCount());
+    }
 }
