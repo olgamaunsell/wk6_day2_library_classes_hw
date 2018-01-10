@@ -24,8 +24,8 @@ public class Library {
     }
 
     // Method to remove a book from the library
-    public Book removeBook(Book book) {
-        this.books.remove(book);
+    public Book removeBook() {
+        return this.books.remove(0);
     }
 
 }

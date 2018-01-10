@@ -15,7 +15,7 @@ public class Borrower {
     }
 
     public void borrowBook(Library library, Book book) {
-        Book borrowedBook = library.removeBook(book);
+        Book borrowedBook = library.removeBook();
         collection.add(borrowedBook);
     }
 }

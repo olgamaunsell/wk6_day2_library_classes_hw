@@ -63,7 +63,7 @@ public class LibraryTest {
     public void canRemoveBook(){
         library.addBook(book);
         int bookCountBefore = library.bookCount();
-        library.removeBook(book);
+        library.removeBook();
         assertEquals(bookCountBefore-1, library.bookCount());
 
 
